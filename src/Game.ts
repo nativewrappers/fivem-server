@@ -1,5 +1,5 @@
-import { Vector3 } from './utils/Vector3';
-import { Player } from './entities/Player';
+import { Vector3 } from "./utils/Vector3";
+import { Player } from "./entities/Player";
 
 export abstract class Game {
 	// A map containing generated hashes.
@@ -10,7 +10,7 @@ export abstract class Game {
 	 * @param input The input string to calculate the hash
 	 */
 	public static generateHash(input: string): number {
-		if (typeof input === 'undefined') {
+		if (typeof input === "undefined") {
 			return 0;
 		}
 

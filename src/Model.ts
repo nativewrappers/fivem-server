@@ -1,4 +1,4 @@
-import { Game } from './Game';
+import { Game } from "./Game";
 
 /**
  * Class to create and manage entity models.
@@ -15,7 +15,7 @@ export class Model {
 	 * @param hash A number or string of the model's hash. Example: "mp_m_freemode_01"
 	 */
 	constructor(hash: number | string) {
-		if (typeof hash === 'string') {
+		if (typeof hash === "string") {
 			this.hash = Game.generateHash(hash);
 		} else {
 			this.hash = hash;

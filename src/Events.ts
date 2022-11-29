@@ -1,6 +1,6 @@
-import { Ped, Prop, Vehicle, Entity } from './entities';
-import { Player } from './entities/Player';
-import { Vector2, Vector3, Vector4 } from './utils';
+import { Ped, Prop, Vehicle, Entity } from "./entities";
+import { Player } from "./entities/Player";
+import { Vector2, Vector3, Vector4 } from "./utils";
 
 export type NetEvent = (player: Player, ...args: any[]) => void;
 
@@ -13,35 +13,35 @@ export class Events {
 
 			for (const arg of args) {
 				switch (arg.type) {
-					case 'vec3': {
+					case "vec3": {
 						newArgs.push(Vector3.create(arg));
 						continue;
 					}
-					case 'vec4': {
+					case "vec4": {
 						newArgs.push(Vector4.create(arg));
 						continue;
 					}
-					case 'vec2': {
+					case "vec2": {
 						newArgs.push(Vector2.create(arg));
 						continue;
 					}
-					case 'ped': {
+					case "ped": {
 						newArgs.push(new Ped(arg.handle));
 						continue;
 					}
-					case 'player': {
+					case "player": {
 						newArgs.push(new Player(arg.source));
 						continue;
 					}
-					case 'prop': {
+					case "prop": {
 						newArgs.push(new Prop(arg.handle));
 						continue;
 					}
-					case 'vehicle': {
+					case "vehicle": {
 						newArgs.push(new Vehicle(arg.handle));
 						continue;
 					}
-					case 'entity': {
+					case "entity": {
 						newArgs.push(new Entity(arg.handle));
 						continue;
 					}

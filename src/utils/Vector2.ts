@@ -8,9 +8,9 @@ export interface Vec2 {
 export type Vector2Type = Vector2 | Vec2;
 
 export class Vector2 implements Vec2 {
-	public type = 'vec2';
+	public type = "vec2";
 	public static create(v1: Vec2 | number): Vector2 {
-		if (typeof v1 === 'number') return new Vector2(v1, v1);
+		if (typeof v1 === "number") return new Vector2(v1, v1);
 		return new Vector2(v1.x, v1.y);
 	}
 
@@ -37,22 +37,22 @@ export class Vector2 implements Vec2 {
 	}
 
 	public static add(v1: Vector2Type, v2: Vector2Type | number): Vector2 {
-		if (typeof v2 === 'number') return new Vector2(v1.x + v2, v1.y + v2);
+		if (typeof v2 === "number") return new Vector2(v1.x + v2, v1.y + v2);
 		return new Vector2(v1.x + v2.x, v1.y + v2.y);
 	}
 
 	public static subtract(v1: Vector2Type, v2: Vector2Type | number): Vector2 {
-		if (typeof v2 === 'number') return new Vector2(v1.x - v2, v1.y - v2);
+		if (typeof v2 === "number") return new Vector2(v1.x - v2, v1.y - v2);
 		return new Vector2(v1.x - v2.x, v1.y - v2.y);
 	}
 
 	public static multiply(v1: Vector2Type, v2: Vector2Type | number): Vector2 {
-		if (typeof v2 === 'number') return new Vector2(v1.x * v2, v1.y * v2);
+		if (typeof v2 === "number") return new Vector2(v1.x * v2, v1.y * v2);
 		return new Vector2(v1.x * v2.x, v1.y * v2.y);
 	}
 
 	public static divide(v1: Vector2Type, v2: Vector2Type | number): Vector2 {
-		if (typeof v2 === 'number') return new Vector2(v1.x / v2, v1.y / v2);
+		if (typeof v2 === "number") return new Vector2(v1.x / v2, v1.y / v2);
 		return new Vector2(v1.x / v2.x, v1.y / v2.y);
 	}
 

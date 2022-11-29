@@ -1,10 +1,10 @@
-import { EntityType } from '../enum/EntityType';
-import { PopulationType } from '../enum/PopulationType';
-import { Vector3 } from '../utils/Vector3';
-import { Player } from './Player';
+import { EntityType } from "../enum/EntityType";
+import { PopulationType } from "../enum/PopulationType";
+import { Vector3 } from "../utils/Vector3";
+import { Player } from "./Player";
 
 export class Entity {
-	public type = 'entity';
+	public type = "entity";
 	constructor(public handle: number) {}
 
 	public get Handle(): number {

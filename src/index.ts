@@ -1,6 +1,6 @@
-export * from './utils';
+export * from "./utils";
 
-export { Game } from './Game';
+export { Game } from "./Game";
 // export { World } from './World';
 
-export * from './entities/index';
+export * from "./entities/index";

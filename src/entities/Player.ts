@@ -1,9 +1,9 @@
-import cleanPlayerName from '../utils/cleanPlayerName';
-import { Vector3 } from '../utils/Vector3';
-import { Ped } from './Ped';
+import cleanPlayerName from "../utils/cleanPlayerName";
+import { Vector3 } from "../utils/Vector3";
+import { Ped } from "./Ped";
 
 export class Player {
-	public type = 'player';
+	public type = "player";
 	constructor(public readonly source: number) {}
 
 	public get Source(): number {
@@ -132,7 +132,7 @@ export class Player {
 		return GetPlayerTimeInPursuit(this.Src, lastPursuit);
 	}
 
-	public drop(reason = 'No reason specified'): void {
+	public drop(reason = "No reason specified"): void {
 		DropPlayer(this.source as any, reason);
 	}
 }
