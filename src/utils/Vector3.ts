@@ -8,7 +8,7 @@ export interface Vec3 {
 export type Vector = Vector3 | Vec3;
 
 export class Vector3 implements Vec3 {
-	public type = "vector3";
+	public type = 'vec3';
 	public static readonly Zero: Vector3 = new Vector3(0, 0, 0);
 
 	public static create(v1: Vec3 | number): Vector3 {

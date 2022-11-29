@@ -1,13 +1,11 @@
-import { EntityType } from "../enum/EntityType";
-import { PopulationType } from "../enum/PopulationType";
-import { Model } from "../Model";
-import { Vector3 } from "../utils/Vector3";
-import { Player } from "./Player";
-
+import { EntityType } from '../enum/EntityType';
+import { PopulationType } from '../enum/PopulationType';
+import { Vector3 } from '../utils/Vector3';
+import { Player } from './Player';
 
 export class Entity {
-	public type = "entity";
-	constructor (public handle: number) {}
+	public type = 'entity';
+	constructor(public handle: number) {}
 
 	public get Handle(): number {
 		return this.Handle;
@@ -74,7 +72,7 @@ export class Entity {
 
 	/**
 	 * @returns the entitys velocity, if the entity is a ped it will return Vector3(0, 0, 0)
-	 */ 
+	 */
 	public get Velocity(): Vector3 {
 		return Vector3.fromArray(GetEntityVelocity(this.handle));
 	}
@@ -96,6 +94,6 @@ export class Entity {
 	}
 
 	public delete() {
-		DeleteEntity(this.handle)
+		DeleteEntity(this.handle);
 	}
 }

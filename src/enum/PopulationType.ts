@@ -9,5 +9,5 @@ export enum PopulationType {
 	Mission,
 	Replay,
 	Cache,
-	Tool
-};
+	Tool,
+}

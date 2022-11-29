@@ -1,10 +1,10 @@
-import cleanPlayerName from "../utils/cleanPlayerName";
-import { Vector3 } from "../utils/Vector3";
-import { Ped } from "./Ped";
+import cleanPlayerName from '../utils/cleanPlayerName';
+import { Vector3 } from '../utils/Vector3';
+import { Ped } from './Ped';
 
 export class Player {
-	public type = "player";
-	constructor(public readonly source: number){}
+	public type = 'player';
+	constructor(public readonly source: number) {}
 
 	public get Source(): number {
 		return this.source;
@@ -14,7 +14,7 @@ export class Player {
 	 * Returns the player source casted as a string
 	 */
 	public get Src(): string {
-		return this.source as unknown as string; 
+		return this.source as unknown as string;
 	}
 
 	public get Ped(): Ped {
@@ -34,7 +34,7 @@ export class Player {
 	}
 
 	public get CamerRotation(): Vector3 {
-		return Vector3.fromArray(GetPlayerCameraRotation(this.Src))
+		return Vector3.fromArray(GetPlayerCameraRotation(this.Src));
 	}
 
 	/**
@@ -44,9 +44,8 @@ export class Player {
 		return GetPlayerLastMsg(this.Src);
 	}
 
-
 	public get MaxArmour(): number {
-		return GetPlayerMaxArmour(this.Src)
+		return GetPlayerMaxArmour(this.Src);
 	}
 
 	public get MaxHealth(): number {
@@ -80,7 +79,7 @@ export class Player {
 
 	/**
 	 * @returns the current routhing bucket the player is in, default is 0
-	 */ 
+	 */
 	public get RoutingBucket(): number {
 		return GetPlayerRoutingBucket(this.Src);
 	}
@@ -112,7 +111,7 @@ export class Player {
 	public get WeaponDefenseModifier2(): number {
 		return GetPlayerWeaponDefenseModifier_2(this.Src);
 	}
-	
+
 	public get IsUsingSuperJump(): boolean {
 		return IsPlayerUsingSuperJump(this.Src);
 	}
@@ -133,8 +132,7 @@ export class Player {
 		return GetPlayerTimeInPursuit(this.Src, lastPursuit);
 	}
 
-	public drop(reason = "No reason specified"): void {
+	public drop(reason = 'No reason specified'): void {
 		DropPlayer(this.source as any, reason);
 	}
-
 }

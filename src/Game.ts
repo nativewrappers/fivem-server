@@ -1,4 +1,5 @@
 import { Vector3 } from './utils/Vector3';
+import { Player } from './entities/Player';
 
 export abstract class Game {
 	// A map containing generated hashes.
@@ -31,11 +32,8 @@ export abstract class Game {
 	 * Get an iterable list of players currently on server.
 	 * @returns Iterable list of Player objects.
 	 */
-	public static *playerList(excludeLocalPlayer = false): IterableIterator<Player> {
-		for (const id of getPlayers() as number[]) {
-			if (excludeLocalPlayer && localPlayer.Handle === id) {
-				continue;
-			}
+	public static *playerList(): IterableIterator<Player> {
+		for (const id of getPlayers() as unknown as number[]) {
 			yield new Player(id);
 		}
 	}
