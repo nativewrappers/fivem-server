@@ -13,6 +13,7 @@ export interface Vec4 {
 export type Vector4Type = Vector4 | Vec4;
 
 export class Vector4 implements Vec4 {
+	public type = "vector4"
 	public static create(v1: Vec4 | number): Vector4 {
 		if (typeof v1 === 'number') return new Vector4(v1, v1, v1, v1);
 		return new Vector4(v1.x, v1.y, v1.z, v1.w);
