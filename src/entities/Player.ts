@@ -142,6 +142,6 @@ export class Player {
 	}
 
 	public drop(reason = "No reason specified"): void {
-		DropPlayer(this.source as any, reason);
+		DropPlayer(this.Src, reason);
 	}
 }

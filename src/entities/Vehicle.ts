@@ -13,7 +13,7 @@ export class Vehicle extends Entity {
 		super(handle);
 	}
 	public static fromNetworkId(netId: number): Vehicle {
-		return new Vehicle(NetworkGetEntityFromNetworkId(netId))
+		return new Vehicle(NetworkGetEntityFromNetworkId(netId));
 	}
 
 	public static fromHandle(handle: number): Entity {
@@ -97,6 +97,7 @@ export class Vehicle extends Entity {
 	}
 
 	public get LightsState(): [boolean, boolean] {
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		const [_, lightsOn, highbeansOn] = GetVehicleLightsState(this.handle);
 		return [lightsOn, highbeansOn];
 	}
@@ -163,7 +164,7 @@ export class Vehicle extends Entity {
 
 	public get MaxHealth(): number {
 		return GetPedMaxHealth(this.handle);
-	} 
+	}
 
 	public get ScriptTaskCommand(): Hash {
 		return GetPedScriptTaskCommand(this.handle);
@@ -191,8 +192,6 @@ export class Vehicle extends Entity {
 	public get TrainCarriageIndex(): number {
 		return GetTrainCarriageIndex(this.handle);
 	}
-
-
 
 	public isTyreBurst(wheelId: number, completely: boolean): boolean {
 		return IsVehicleTyreBurst(this.handle, wheelId, completely);

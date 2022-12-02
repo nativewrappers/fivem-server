@@ -7,5 +7,5 @@ export enum ClassTypes {
 	Vector2,
 	Vector3,
 	Vector4,
-	Quanterion
+	Quanterion,
 }

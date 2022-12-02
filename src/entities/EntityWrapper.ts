@@ -4,12 +4,11 @@ import { Ped } from "./Ped";
 import { Prop } from "./Prop";
 import { Vehicle } from "./Vehicle";
 
-
 export type EntityType = Ped | Prop | Vehicle | Entity;
 
 export class EntityWrapper {
 	public static fromHandle(handle: number): EntityType {
-		switch(GetEntityType(handle)) {
+		switch (GetEntityType(handle)) {
 			case eEntityType.Ped:
 				return new Ped(handle);
 			case eEntityType.Automobile:

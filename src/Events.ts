@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Ped, Prop, Vehicle, Entity } from "./entities";
 import { Player } from "./entities/Player";
 import { ClassTypes } from "./enum/ClassTypes";
@@ -48,7 +49,7 @@ const getClassFromArguments = (...args: any[]): any[] => {
 		}
 	}
 	return newArgs;
-}
+};
 
 export class Events {
 	public static cancel(): void {
@@ -84,5 +85,4 @@ export class Events {
 			event(ply, ...getClassFromArguments(...args));
 		});
 	};
-
 }

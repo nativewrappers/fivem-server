@@ -13,7 +13,7 @@ export class Convar {
 
 	public set(variable: string, value: string): void {
 		SetConvar(variable, value);
-	} 
+	}
 
 	public setReplicated(variable: string, value: string): void {
 		SetConvarReplicated(variable, value);

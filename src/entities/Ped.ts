@@ -11,7 +11,7 @@ export class Ped extends Entity {
 	}
 
 	public static fromNetworkId(netId: number): Ped {
-		return new Ped(NetworkGetEntityFromNetworkId(netId))
+		return new Ped(NetworkGetEntityFromNetworkId(netId));
 	}
 
 	public static fromHandle(handle: number): Ped {
@@ -44,7 +44,7 @@ export class Ped extends Entity {
 
 	public get LastSourceOfDamage(): EntityType {
 		return EntityWrapper.fromHandle(this.handle);
-	} 
+	}
 
 	public get DeathCause(): EntityType {
 		return EntityWrapper.fromHandle(this.handle);
@@ -55,7 +55,7 @@ export class Ped extends Entity {
 	}
 
 	public get LastVehicle(): Vehicle {
-		return EntityWrapper.fromHandle(this.handle) as Vehicle; 
+		return EntityWrapper.fromHandle(this.handle) as Vehicle;
 	}
 
 	public get IsPlayer(): boolean {

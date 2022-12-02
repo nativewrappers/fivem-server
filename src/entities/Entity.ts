@@ -1,7 +1,8 @@
 import { ClassTypes } from "../enum/ClassTypes";
-import { eEntityType } from "../enum/EntityType";
+import { eEntityType } from "../enum/eEntityType";
 import { PopulationType } from "../enum/PopulationType";
 import { Hash } from "../type/Hash";
+import { Vector4 } from "../utils";
 import { Vector3 } from "../utils/Vector3";
 import { EntityType, EntityWrapper } from "./EntityWrapper";
 import { Player } from "./Player";
@@ -11,7 +12,7 @@ export class Entity {
 	constructor(protected handle: number) {}
 
 	public static fromNetworkId(netId: number): Entity {
-		return new Entity(NetworkGetEntityFromNetworkId(netId))
+		return new Entity(NetworkGetEntityFromNetworkId(netId));
 	}
 
 	public static fromHandle(handle: number): Entity {
@@ -36,6 +37,10 @@ export class Entity {
 
 	public get Heading(): number {
 		return GetEntityHeading(this.handle);
+	}
+
+	public get PositionAndHeading(): Vector4 {
+		return Vector4.fromArray([...GetEntityCoords(this.handle), GetEntityHeading(this.handle)]);
 	}
 
 	public get Health(): number {

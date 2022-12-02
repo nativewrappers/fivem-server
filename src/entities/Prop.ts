@@ -8,7 +8,7 @@ export class Prop extends Entity {
 	}
 
 	public static fromNetworkId(netId: number): Prop {
-		return new Prop(NetworkGetEntityFromNetworkId(netId))
+		return new Prop(NetworkGetEntityFromNetworkId(netId));
 	}
 
 	public static fromHandle(handle: number): Prop {

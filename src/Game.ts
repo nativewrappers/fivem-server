@@ -36,13 +36,23 @@ export abstract class Game {
 		return GetGameName();
 	}
 
-	public static registerCommand(name: string, handler: (player: Player, args: any[]) => void, restricted = false): void {
-		RegisterCommand(name, (source: string, args: any[]) => {
-			const player = new Player(parseInt(source));
+	public static registerCommand(
+		name: string,
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		handler: (player: Player, args: any[]) => void,
+		restricted = false,
+	): void {
+		RegisterCommand(
+			name,
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			(source: string, args: any[]) => {
+				const player = new Player(parseInt(source));
 
-			handler(player, args);
-		}, restricted)
-	};
+				handler(player, args);
+			},
+			restricted,
+		);
+	}
 
 	public static get RegisteredCommands(): [{ name: string }] {
 		return GetRegisteredCommands() as unknown as [{ name: string }];
@@ -59,7 +69,7 @@ export abstract class Game {
 	}
 
 	/**
-	 * Get an interable list of peds currently on the server 
+	 * Get an interable list of peds currently on the server
 	 * @returns Iterable list of Peds.
 	 */
 	public static *getAllPed(): IterableIterator<Ped> {
@@ -69,7 +79,7 @@ export abstract class Game {
 	}
 
 	/**
-	 * Get an interable list of props currently on the server 
+	 * Get an interable list of props currently on the server
 	 * @returns Iterable list of Props.
 	 */
 	public static *getAllProps(): IterableIterator<Prop> {
@@ -79,7 +89,7 @@ export abstract class Game {
 	}
 
 	/**
-	 * Get an interable list of vehicles currently on the server 
+	 * Get an interable list of vehicles currently on the server
 	 * @returns Iterable list of Vehicles.
 	 */
 	public static *getAllVehicles(): IterableIterator<Vehicle> {
