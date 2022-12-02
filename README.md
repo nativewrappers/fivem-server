@@ -4,11 +4,11 @@
   <i>:fire: A Javascript/Typescript wrapper for the FiveM server natives :video_game:</i>
   <br>
   <br>
-  <a href="https://github.com/AvarianKnight/native-wrappers-fivem-server/blob/master/LICENSE">
+  <a href="https://github.com/nativewrappers/fivem-server/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat" alt="License: MIT">
   </a>
   <a href="https://www.npmjs.com/package/@nativewrappers/fivem-server">
-    <img src="https://img.shields.io/npm/v/@nativewrappers/client?style=flat" alt="npm version">
+    <img src="https://img.shields.io/npm/v/@nativewrappers/fivem-server?style=flat" alt="npm version">
   </a>
   <a href="https://www.npmjs.com/package/@nativewrappers/fivem-server">
     <img src="https://img.shields.io/npm/dm/@nativewrappers/fivem-server?style=flat">
@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <a href="https://fivemjs.avarian.dev/">Documentation</a>
+  <a href="https://fivemjs-server.avarian.dev/">Documentation</a>
   -
   <a href="https://forum.fivem.net/t/fivem-js-v1-3-2-javascript-typescript-wrapper-now-with-menu-class-nativeui/268640">Forum</a>
 </p>
