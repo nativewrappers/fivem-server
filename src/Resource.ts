@@ -19,7 +19,7 @@ export class Resource {
 	public scheduleTick(): void {
 		return ScheduleResourceTick(this.name);
 	}
-	
+
 	public start(): void {
 		StartResource(this.name);
 	}

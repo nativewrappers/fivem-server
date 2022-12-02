@@ -173,6 +173,27 @@ export class Vehicle extends Entity {
 		return GetPedScriptTaskStage(this.handle);
 	}
 
+	public get MainRotorHealth(): number {
+		return GetHeliMainRotorHealth(this.handle);
+	}
+
+	public get TailRotorHealth(): number {
+		return GetHeliTailRotorHealth(this.handle);
+	}
+
+	/**
+	 * This might supposed to be TrainEngineHealth?
+	 */
+	public get TrainCarriageEngine(): number {
+		return GetTrainCarriageEngine(this.handle);
+	}
+
+	public get TrainCarriageIndex(): number {
+		return GetTrainCarriageIndex(this.handle);
+	}
+
+
+
 	public isTyreBurst(wheelId: number, completely: boolean): boolean {
 		return IsVehicleTyreBurst(this.handle, wheelId, completely);
 	}

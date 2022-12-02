@@ -1,6 +1,7 @@
 import { ClassTypes } from "../enum/ClassTypes";
 import { eEntityType } from "../enum/EntityType";
 import { PopulationType } from "../enum/PopulationType";
+import { Hash } from "../type/Hash";
 import { Vector3 } from "../utils/Vector3";
 import { EntityType, EntityWrapper } from "./EntityWrapper";
 import { Player } from "./Player";
@@ -45,7 +46,7 @@ export class Entity {
 		return GetEntityMaxHealth(this.handle);
 	}
 
-	public get Model(): number {
+	public get Model(): Hash {
 		return GetEntityModel(this.handle);
 	}
 
