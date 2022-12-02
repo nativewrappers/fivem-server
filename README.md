@@ -1,25 +1,23 @@
-A WIP server side wrapper
-
 <h1 align="center">native-wrappers-fivem-server</h1>
 
 <p align="center">
-  <i>:fire: A Javascript/Typescript wrapper for the FiveM natives :video_game:</i>
+  <i>:fire: A Javascript/Typescript wrapper for the FiveM server natives :video_game:</i>
   <br>
   <br>
-  <a href="https://github.com/AvarianKnight/native-wrappers-client/blob/master/LICENSE">
+  <a href="https://github.com/AvarianKnight/native-wrappers-fivem-server/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat" alt="License: MIT">
   </a>
-  <a href="https://www.npmjs.com/package/@nativewrappers/client">
+  <a href="https://www.npmjs.com/package/@nativewrappers/fivem-server">
     <img src="https://img.shields.io/npm/v/@nativewrappers/client?style=flat" alt="npm version">
   </a>
-  <a href="https://www.npmjs.com/package/@nativewrappers/client">
-    <img src="https://img.shields.io/npm/dm/@nativewrappers/client?style=flat">
+  <a href="https://www.npmjs.com/package/@nativewrappers/fivem-server">
+    <img src="https://img.shields.io/npm/dm/@nativewrappers/fivem-server?style=flat">
   </a>
-  <a href="https://github.com/nativewrappers/fivem-client/actions/workflows/config.yml">
-    <img src="https://github.com/nativewrappers/fivem-client/actions/workflows/config.yml/badge.svg" alt="Workflow Status">
+  <a href="https://github.com/nativewrappers/fivem-server/actions/workflows/config.yml">
+    <img src="https://github.com/nativewrappers/fivem-server/actions/workflows/config.yml/badge.svg" alt="Workflow Status">
   </a>
-  <a href="https://github.com/AvarianKnight/native-wrappers-client/commits/master">
-    <img src="https://img.shields.io/github/last-commit/nativewrappers/fivem-client.svg?style=flat" alt="Last commit">
+  <a href="https://github.com/AvarianKnight/native-wrappers-fivem-server/commits/master">
+    <img src="https://img.shields.io/github/last-commit/nativewrappers/fivem-server.svg?style=flat" alt="Last commit">
   </a>
 </p>
 

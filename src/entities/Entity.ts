@@ -1,22 +1,32 @@
-import { EntityType } from "../enum/EntityType";
+import { ClassTypes } from "../enum/ClassTypes";
+import { eEntityType } from "../enum/EntityType";
 import { PopulationType } from "../enum/PopulationType";
 import { Vector3 } from "../utils/Vector3";
+import { EntityType, EntityWrapper } from "./EntityWrapper";
 import { Player } from "./Player";
 
 export class Entity {
-	public type = "entity";
-	constructor(public handle: number) {}
+	protected type = ClassTypes.Entity;
+	constructor(protected handle: number) {}
+
+	public static fromNetworkId(netId: number): Entity {
+		return new Entity(NetworkGetEntityFromNetworkId(netId))
+	}
+
+	public static fromHandle(handle: number): Entity {
+		return new Entity(handle);
+	}
 
 	public get Handle(): number {
 		return this.Handle;
 	}
 
 	public get Exists(): boolean {
-		return DoesEntityExist(this.handle);
+		return this.handle !== 0 && DoesEntityExist(this.handle);
 	}
 
-	public get AttachedTo(): Entity {
-		return new Entity(GetEntityAttachedTo(this.handle));
+	public get AttachedTo(): EntityType {
+		return EntityWrapper.fromHandle(GetEntityAttachedTo(this.handle));
 	}
 
 	public get Position(): Vector3 {
@@ -66,7 +76,7 @@ export class Entity {
 		return GetEntitySpeed(this.handle);
 	}
 
-	public get Type(): EntityType {
+	public get Type(): eEntityType {
 		return GetEntityType(this.handle);
 	}
 

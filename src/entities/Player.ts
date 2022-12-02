@@ -1,10 +1,15 @@
+import { ClassTypes } from "../enum/ClassTypes";
 import cleanPlayerName from "../utils/cleanPlayerName";
 import { Vector3 } from "../utils/Vector3";
 import { Ped } from "./Ped";
 
 export class Player {
-	public type = "player";
+	protected type = ClassTypes.Player;
 	constructor(public readonly source: number) {}
+
+	public get Exists(): boolean {
+		return this.source !== 0;
+	}
 
 	public get Source(): number {
 		return this.source;
@@ -110,6 +115,10 @@ export class Player {
 
 	public get WeaponDefenseModifier2(): number {
 		return GetPlayerWeaponDefenseModifier_2(this.Src);
+	}
+
+	public get AirDragMultiplier(): number {
+		return GetAirDragMultiplierForPlayersVehicle(this.Src);
 	}
 
 	public get IsUsingSuperJump(): boolean {

@@ -4,9 +4,11 @@ export { Vector4 } from "./Vector4";
 export { PointF } from "./PointF";
 export { Maths } from "./Maths";
 export { Quaternion } from "./Quaternion";
+export { Color } from "./Color";
 
 export const Delay = (milliseconds: number): Promise<void> =>
 	new Promise(resolve => setTimeout(resolve, milliseconds));
+
 
 export { enumValues } from "./enumValues";
 export { getStringFromUInt8Array } from "./getStringFromUInt8Array";
