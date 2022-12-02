@@ -149,4 +149,9 @@ export class Player {
 	public drop(reason = "No reason specified"): void {
 		DropPlayer(this.Src, reason);
 	}
+
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	public emit(eventName: string, ...args: any[]): void {
+		TriggerClientEvent(eventName, this.source, ...args);
+	}
 }
