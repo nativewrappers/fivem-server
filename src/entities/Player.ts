@@ -1,3 +1,4 @@
+import cfx from "../cfx";
 import { ClassTypes } from "../enum/ClassTypes";
 import cleanPlayerName from "../utils/cleanPlayerName";
 import { Vector3 } from "../utils/Vector3";
@@ -5,7 +6,7 @@ import { Ped } from "./Ped";
 
 export class Player {
 	protected type = ClassTypes.Player;
-	constructor(public readonly source: number) {}
+	constructor(private readonly source: number) {}
 
 	public get Exists(): boolean {
 		return this.source !== 0;
@@ -13,6 +14,10 @@ export class Player {
 
 	public get Source(): number {
 		return this.source;
+	}
+
+	public get State(): StateBagInterface {
+		return cfx.Player(this.source).state;
 	}
 
 	/**

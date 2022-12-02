@@ -1,3 +1,4 @@
+import cfx from "../cfx";
 import { ClassTypes } from "../enum/ClassTypes";
 import { eEntityType } from "../enum/eEntityType";
 import { PopulationType } from "../enum/PopulationType";
@@ -17,6 +18,10 @@ export class Entity {
 
 	public static fromHandle(handle: number): Entity {
 		return new Entity(handle);
+	}
+
+	public get State(): StateBagInterface {
+		return cfx.Entity(this.handle).state;
 	}
 
 	public get Handle(): number {
