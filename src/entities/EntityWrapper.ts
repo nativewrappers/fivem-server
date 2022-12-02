@@ -1,4 +1,4 @@
-import { eEntityType } from "../enum/EntityType";
+import { eEntityType } from "../enum/eEntityType";
 import { Entity } from "./Entity";
 import { Ped } from "./Ped";
 import { Prop } from "./Prop";
